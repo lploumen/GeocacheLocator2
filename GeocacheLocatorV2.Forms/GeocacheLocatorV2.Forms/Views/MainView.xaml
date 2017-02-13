@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage   x:Class="GeocacheLocatorV2.PCL.Views.MainView"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  MasterBehavior="Popover"
+                  forms:Message.Attach="[Event IsPresentedChanged] = [Action UpdateMenu]"
+                  xmlns:forms="clr-namespace:Caliburn.Micro.Xamarin.Forms;assembly=Caliburn.Micro.Platform.Xamarin.Forms"
+                  xmlns:views1="clr-namespace:GeocacheLocatorV2.PCL.Views;assembly=GeocacheLocatorV2.PCL"
+                  Title="Glider School">
+  <MasterDetailPage.Master>
+    <views1:NavigationView BindingContext="{Binding Navigation}" />
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage BindingContext="{Binding ActiveScreen}">
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

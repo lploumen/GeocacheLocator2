@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeocacheLocatorV2.PCL.Views.GeocacheDescriptionView">
+
+  <WebView WidthRequest="1000" HeightRequest="1000" VerticalOptions="Fill" HorizontalOptions="Fill">
+    <WebView.Source>
+      <HtmlWebViewSource Html="&lt;html>&lt;body>&lt;p>The HTML string.&lt;/p>&lt;/body>&lt;/html>" />
+    </WebView.Source>
+  </WebView>
+</ContentView>

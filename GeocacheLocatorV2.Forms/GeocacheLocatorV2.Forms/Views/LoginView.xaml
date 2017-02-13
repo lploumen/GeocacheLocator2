@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Caliburn.Micro.Xamarin.Forms;assembly=Caliburn.Micro.Platform.Xamarin.Forms"
+             xmlns:extensions1="clr-namespace:GeocacheLocatorV2.PCL.Extensions;assembly=GeocacheLocatorV2.PCL"
+             Title="{extensions1:Translate Title}"
+             x:Class="GeocacheLocatorV2.PCL.Views.LoginView">
+  <TabbedPage.Children>
+    <ContentPage Title="{extensions1:Translate Services}">
+      <StackLayout Padding="20">
+
+        <StackLayout>
+          <Label VerticalTextAlignment="Center" VerticalOptions="Center" Text="{extensions1:Translate GeocachingCom}" FontSize="24"/>
+          <Switch IsToggled="{Binding UseGeocachingCom}">Use</Switch>
+          <Button VerticalOptions="Center" Text="{Binding GeocachingLoginState}" forms:Message.Attach="LoginGeocachingCom" />
+
+          <Label VerticalTextAlignment="Center" VerticalOptions="Center" Text="{extensions1:Translate OpencachingPL}" FontSize="24"/>
+          <Switch IsToggled="{Binding UseGeocachingPl}">Use</Switch>
+          <Button VerticalOptions="Center" Text="{Binding OpencachingPLLoginState}" forms:Message.Attach="LoginOpencachingPl" />
+
+          <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label VerticalOptions="Center"
+                   Text="{extensions1:Translate LocationEnabled}"></Label>
+            <Switch VerticalOptions="Center" HorizontalOptions="End"
+                   IsToggled="{Binding LocationEnabled}"></Switch>
+          </StackLayout>
+
+        </StackLayout>
+      </StackLayout>
+    </ContentPage>
+  </TabbedPage.Children>
+
+</TabbedPage>

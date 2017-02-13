@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:extensions1="clr-namespace:GeocacheLocatorV2.PCL.Extensions;assembly=GeocacheLocatorV2.PCL"
+            Title="{extensions1:Translate Details}"
+            x:Class="GeocacheLocatorV2.PCL.Views.GeocacheDetailView">
+
+  <TabbedPage.ToolbarItems>
+    <ToolbarItem Text="{extensions1:Translate Hint}" Command="{Binding ShowHintCommand}" >
+      <ToolbarItem.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource" WinPhone="question.png" />
+      </ToolbarItem.Icon>
+    </ToolbarItem>
+    <ToolbarItem Text="{extensions1:Translate Navigate}" Command="{Binding NavigateToCacheCommand}" >
+      <ToolbarItem.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource" WinPhone="directions.png" />
+      </ToolbarItem.Icon>
+    </ToolbarItem>
+  </TabbedPage.ToolbarItems>
+
+  <TabbedPage.Children>
+    <ContentPage Title="{extensions1:Translate Description}">
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" FontSize="30" FontAttributes="Bold" Text="{Binding Parameter.Name}"/>
+        <WebView Grid.Row="1" x:Name="webView">
+        </WebView>
+      </Grid>
+    </ContentPage>
+
+    <ContentPage Title="{extensions1:Translate Logs}">
+      <ListView ItemsSource="{Binding Parameter.Logs}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Margin="0,0,0,20">
+                <StackLayout Orientation="Horizontal">
+                  <Label FontSize="20" Text="{Binding Username}"/>
+                  <Label  FontSize="20" Text=" | "/>
+                  <Label  FontSize="20" Text="{Binding Date,StringFormat='{0:d}'}"/>
+                  <Label  FontSize="20" Text=" | "/>
+                  <Label  FontSize="20" Text="{Binding LogType}"/>
+                </StackLayout>
+                <Label  FontSize="25" FontAttributes="Bold" Text="{Binding Comment}"/>
+
+                <Label HorizontalTextAlignment="Center"  FontSize="30" Text="-------------------------"/>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </ContentPage>
+
+
+
+  </TabbedPage.Children>
+</TabbedPage>

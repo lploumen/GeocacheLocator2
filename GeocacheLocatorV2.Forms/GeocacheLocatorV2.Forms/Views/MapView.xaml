@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="GeocacheLocatorV2.PCL.Views.MapView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{extensions1:Translate Map}"
+             xmlns:extensions1="clr-namespace:GeocacheLocatorV2.PCL.Extensions;assembly=GeocacheLocatorV2.PCL"
+             xmlns:controls="clr-namespace:GeocacheLocatorV2.PCL.Controls;assembly=GeocacheLocatorV2.PCL">
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="{extensions1:Translate UpdateLocation}" Command="{Binding UpdateLocationCommand}" >
+      <ToolbarItem.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource"
+                    WinPhone="location.png"/>
+      </ToolbarItem.Icon>
+    </ToolbarItem>
+
+    <ToolbarItem Text="{extensions1:Translate DownloadAllVisibleCaches}" Command="{Binding DownloadAllVisibleCachesCommand}" >
+      <ToolbarItem.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource" WinPhone="download.png" />
+      </ToolbarItem.Icon>
+    </ToolbarItem>
+
+  </ContentPage.ToolbarItems>
+
+  <AbsoluteLayout>
+
+    <StackLayout AbsoluteLayout.LayoutFlags="All"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1">
+
+      <controls:CustomMap x:Name="MyMap"
+                          HasZoomEnabled="True"
+                          IsShowingUser="false"
+                          ItemsSource="{Binding Items}"
+                          WidthRequest="300"/>
+    </StackLayout>
+
+    <Label Text="{Binding Items.Count}" TextColor="Black"></Label>
+
+    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,0.07"
+                 AbsoluteLayout.LayoutFlags="All"
+                 Spacing="0">
+
+      <ContentView IsVisible="{Binding IsBusy}"
+                   Opacity="0.8"
+                   BackgroundColor="Gray">
+
+        <StackLayout>
+          <Label Text="{Binding BusyText}"
+             TextColor="White"/>
+          <ActivityIndicator IsRunning="{Binding IsBusy}" Color="White" VerticalOptions="Start"/>
+        </StackLayout>
+      </ContentView>
+
+      <Label Text="{extensions1:Translate UpdatingLocation}"
+             TextColor="White"
+             Opacity="0.8"
+             BackgroundColor="Gray"
+             IsVisible="{Binding IsUpdatingLocation}"/>
+    </StackLayout>
+  </AbsoluteLayout>
+
+</ContentPage>

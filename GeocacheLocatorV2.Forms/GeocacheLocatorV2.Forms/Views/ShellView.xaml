@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeocacheLocatorV2.PCL.Views.ShellView"
+             Title="{extensions1:Translate Title}"
+             xmlns:forms="clr-namespace:Caliburn.Micro.Xamarin.Forms;assembly=Caliburn.Micro.Platform.Xamarin.Forms"
+             xmlns:extensions1="clr-namespace:GeocacheLocatorV2.PCL.Extensions;assembly=GeocacheLocatorV2.PCL">
+
+  <StackLayout VerticalOptions="CenterAndExpand">
+    <Button BorderColor="White" VerticalOptions="Center" HorizontalOptions="Fill" Text="{extensions1:Translate Settings}" forms:Message.Attach="[Event Clicked] = [ShowSettings()]"/>
+    <Button VerticalOptions="Center" HorizontalOptions="Fill" Text="{extensions1:Translate Map}" forms:Message.Attach="[Event Clicked] = [ShowMap()]"/>
+    <Button VerticalOptions="Center" HorizontalOptions="Fill" Text="test" forms:Message.Attach="[Event Clicked] = [ShowMapTest()]"/>
+   </StackLayout>
+</ContentPage>
