@@ -1,1 +1,1 @@
-C:\Users\Loic\Source\Workspaces\Sources\GeocacheLocatorV2\Main\GeocacheLocatorV2.Forms\GeocacheLocatorV2.Forms.UWP\AppPackages\GeocacheLocatorV2.UWP_0.2.11.0\GeocacheLocatorV2.UWP_0.2.11.0_x86_x64_arm.appxbundle
+C:\Users\Loic\Source\Workspaces\Sources\GeocacheLocatorV2\Main\GeocacheLocatorV2.Forms\GeocacheLocatorV2.Forms.UWP\AppPackages\GeocacheLocatorV2.UWP_0.2.12.0\GeocacheLocatorV2.UWP_0.2.12.0_x86_x64_arm.appxbundle
