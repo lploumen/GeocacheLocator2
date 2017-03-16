@@ -144,6 +144,10 @@
       <Project>{b07d540a-36e2-4ee5-9e08-dfcdfb426126}</Project>
       <Name>GeocachingLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\GeocachingToolbox\GeocachingToolbox\GeocachingToolbox.csproj">
+      <Project>{180c45b3-15d5-4154-aaa3-c96c666039a5}</Project>
+      <Name>GeocachingToolbox</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.Settings">

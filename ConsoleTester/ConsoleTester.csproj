@@ -89,6 +89,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GeocachingToolbox\GeocachingToolbox\GeocachingToolbox.csproj">
+      <Project>{180c45b3-15d5-4154-aaa3-c96c666039a5}</Project>
+      <Name>GeocachingToolbox</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -88,6 +88,12 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GeocachingToolbox\GeocachingToolbox\GeocachingToolbox.csproj">
+      <Project>{180c45b3-15d5-4154-aaa3-c96c666039a5}</Project>
+      <Name>GeocachingToolbox</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
