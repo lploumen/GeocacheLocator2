@@ -85,12 +85,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GeocachingToolbox\GeocachingToolbox.csproj">
-      <Project>{180c45b3-15d5-4154-aaa3-c96c666039a5}</Project>
-      <Name>GeocachingToolbox</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="ApiKeys.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -1,0 +1,3 @@
+[submodule "GeocachingToolbox"]
+	path = GeocachingToolbox
+	url = https://github.com/lploumen/GeocachingToolbox.git

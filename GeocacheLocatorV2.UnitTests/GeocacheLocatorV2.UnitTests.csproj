@@ -122,14 +122,6 @@
       <Project>{b07d540a-36e2-4ee5-9e08-dfcdfb426126}</Project>
       <Name>GeocachingLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GeocachingToolbox.UnitTests\GeocachingToolbox.UnitTests.csproj">
-      <Project>{F57B9E28-7BFA-47D9-A2A1-5C3E9B748709}</Project>
-      <Name>GeocachingToolbox.UnitTests</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GeocachingToolbox\GeocachingToolbox.csproj">
-      <Project>{180C45B3-15D5-4154-AAA3-C96C666039A5}</Project>
-      <Name>GeocachingToolbox</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -185,10 +185,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GeocachingToolbox\GeocachingToolbox.csproj">
-      <Project>{180C45B3-15D5-4154-AAA3-C96C666039A5}</Project>
-      <Name>GeocachingToolbox</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GeocacheLocatorV2.Forms\GeocacheLocatorV2.PCL.csproj">
       <Project>{D076E9B6-31A6-4100-9FED-25D21EA93271}</Project>
       <Name>GeocacheLocatorV2.PCL</Name>
